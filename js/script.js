@@ -80,10 +80,14 @@ const addDetails = () => {
 
 const deleteItem = (id) => {
     const deletedItem = banco.findIndex(item => item.id === id)
-    const deletedDetailsDoPai = details.findIndex(item => item.idDoPai === id)
     
     banco.splice(deletedItem, 1)
-    details.splice(deletedDetailsDoPai, 1)
+    
+    details.forEach( (detail, index) => {
+        if(detail.idDoPai === id) {
+            detail.splice(index, 1)
+        }
+    })
 
     updateScreen()
 }
