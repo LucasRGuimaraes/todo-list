@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Lista ToDo</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a href="#" id="back" onclick="backToLists()">&#8249; Back</a>
+            <h1 class="title" id="pagTitle">Lists</h1>
+        </header>
+
+        <div id="lists">
+            <main class="todoList" id="todoList">
+            </main>
+            <div class="newTodoItem">
+                <input type="text" id="addNewTodoItem" placeholder="Digite e pressione o botão para adicionar">
+                <div class="add button" onclick="addItem()">+</div>
+            </div>
+        </div>
+
+        <div id="details">
+            <main class="todoList" id="detailsList">
+            </main>
+
+            <div class="newTodoItem">
+                <input type="text" id="addNewTodoDetails" placeholder="Digite e pressione enter para adicionar">
+                <div class="add button" onclick="addDetails()">+</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
